@@ -18,7 +18,9 @@ class Node:
 		if isinstance(self, other.__class__):
 			return self.__dict__ == other.__dict__
 		return False
-	
+
+	def __str__(self):
+		return "Node(dir: {}, tx: {})".format(self.direction, self.tx)
 
 	@property
 	def direction(self):
